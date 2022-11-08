@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iris-rf
+  namespace: deployment-demo
+  labels:
+    app: iris-rf
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: iris-rf
+  template:
+    metadata:
+      labels:
+        app: iris-rf
+    spec:
+      containers:
+        - name: iris-rf
+          image: boxkey/iris-rf:beta
+          ports:
+            - containerPort: 5000
+          env:
+            - name: MLFLOW_MODEL_NAME
+              value: "Iris_Random_Forest"
+            - name: MLFLOW_MODEL_VERSION
+              value: "1"
+            - name: MLFLOW_URI
+              valueFrom:
+                secretKeyRef:
+                  name: mlflow
+                  key: mlflowuri
+                  optional: false
