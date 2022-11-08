@@ -4,6 +4,7 @@ This is a repository for my talk, [`Gentle introduction to scaling up ML service
 
 ## Contents
 
+* Slides I used for my talk ([link](docs/Slides.pdf))
 * How to set up a 3-node `K3s` cluster ([link](docs/k3s_installation.md))
 * How to set up `Knative Serving` ([link](docs/knative_installation.md))
 * How to set up `mlflow model registry` ([link](docs/mlflow_installation.md))
