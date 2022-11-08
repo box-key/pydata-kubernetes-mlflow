@@ -27,7 +27,7 @@ deploy:
 	docker push $(DOCKER_HUB_USER)/$(IMAGE_NAME):$(TAG)
 
 test-container:
-# .env container necessary information
+# .env contains necessary information
 	docker run --rm -it --env-file .env -p 5000:5000 $(IMAGE_NAME):$(TAG)
 
 test-local:
