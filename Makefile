@@ -61,7 +61,7 @@ clean:
 	done
 
 mlflow-image:
-	docker build -t $(MLFLOW_NAME):$(MLFLOW_TAG) -f docs/Dockerfile.mlflow .
+	docker build -t $(MLFLOW_NAME):$(MLFLOW_TAG) -f mlflow/Dockerfile .
 
 help:
 	@echo 'Test APP:'
