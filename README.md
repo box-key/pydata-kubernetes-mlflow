@@ -12,7 +12,7 @@ This is a repository for my talk, [`Gentle introduction to scaling up ML service
 
 ## Prerequisites
 
-I recommend you to install the followings to run this repo
+I recommend you to install the followings before you run this repo
 
 * `make` (Linux tool)
 * `curl` (Linux tool)
